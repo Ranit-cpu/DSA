@@ -9,6 +9,7 @@ public class Duplicates {
                   System.out.print(arr[i] + " ");
             }
       }
+
       static int removeDuplicates(int[] arr) {
             int i = 0;
             for (int j = 1; j < arr.length; j++) {
