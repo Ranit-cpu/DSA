@@ -51,12 +51,12 @@ public class MergeSortedArrayWS {
                     swapIfGreater(arr1, arr2, left,right-n);
                 }
                 //left and right is in array2
-                else if (left >= n) {
+                else if (left >=n) {
                     swapIfGreater(arr1,arr2, left-n, right-n);
                 }
                 //left and right is in array1
                 else {
-                    swapIfGreater(arr1, arr2, left, right);
+                    swapIfGreater(arr1, arr1, left, right);
                 }
                 left++;
                 right++;
