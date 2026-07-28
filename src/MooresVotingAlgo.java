@@ -1,4 +1,4 @@
-//import java.io.*;
+import java.util.Scanner;
 
 class MooresVotingAlgo
 {
@@ -37,10 +37,26 @@ class MooresVotingAlgo
       }
       
       // Driver code
-      public static void main(String[] args)
-      {
-            int[] arr = { 1, 2, 2, 2, 1, 1 };
-            int majority = findMajority(arr);
-            System.out.println(" The majority element is : "+ majority);
+      public static void main(String[] args) {
+          Scanner sc = new Scanner(System.in);
+
+          System.out.println("Enter elements (space separated):");
+          String input = sc.nextLine();
+
+          String[] parts = input.trim().split("\\s+");
+          int[] arr = new int[parts.length];
+
+          for (int i = 0; i < parts.length; i++) {
+              arr[i] = Integer.parseInt(parts[i]);
+          }
+
+          int majority = findMajority(arr);
+
+          if (majority != -1)
+              System.out.println("The majority element is: " + majority);
+          else
+              System.out.println("No majority element found.");
+
+          sc.close();
       }
 }

@@ -2,6 +2,8 @@
 
 public class RepeatAndMissing {
 
+    
+    //Non-Optimal Solution
     private static int[] findRepeatAndMissingBrute(int[] arr){
         int[] hasharr = new int[arr.length+1];
         int repeat = -1;
@@ -22,6 +24,7 @@ public class RepeatAndMissing {
         return new int[]{repeat,missing};
     }
 
+    //Optimal Solution
     private static int[] findRepeatAndMissingOptimal(int[] arr){
         //S-Sn
         //S2 -Sn2
@@ -36,11 +39,11 @@ public class RepeatAndMissing {
         }
 
         long val1 = S - Sn;
-        long val2  =S2 -Sn2;
+        long val2  =S2 - Sn2;
 
         val2 = val2/val1;
 
-        long repeat = (val1+val2)/2;
+        long repeat = (val1 + val2)/2;
         long missing = repeat - val1;
 
         return new int[] {(int)repeat,(int)missing};

@@ -27,9 +27,9 @@ public class TwoSum
       }
       
       public static void main(String[] args) {
-            int n = 5;
-            int[] arr = {2, 6, 5, 8, 11};
-            int target = 14;
+            int n = 4;
+            int[] arr = {3,1,2,4};
+            int target = 6;
             int ans = twoSum(n, arr, target);
             System.out.println("the number of subarrays are = " + ans);
             
